@@ -1,4 +1,5 @@
 // Selecting Elements
+const container = document.querySelector(".container");
 const form = document.querySelector("form");
 const input = document.querySelector("input");
 const qrBox = document.querySelector(".qr-box");
@@ -14,17 +15,44 @@ for (let i = 0; i < 100; i++) {
 }
 
 // Functions
-
-// Storing input Link
-
-form.addEventListener("submit", function () {
-  const URL = input.value;
+const storeLink = function () {
+  // const URL = input.value;
+  const URL = "hhjbjkjnnj";
   input.blur();
   console.log(URL);
+};
+
+const checkURL = function (url) {};
+
+const createQRCode = async function () {
+  // new QRCode(qrBox, URL);
+  let qr = await new QRCode(qrBox, URL);
+
+  if (!qr) {
+    console.log("ERROR");
+  }
+
+  console.log(qr);
+};
+
+const containerSizeSuccess = function () {
+  container.style.height = "450px";
+};
+
+const qrBoxDisplay = function () {
+  qrBox.style.display = "block";
+};
+
+form.addEventListener("submit", function () {
+  // Store Link
+  storeLink();
+
+  // Changing Container Layout
+  containerSizeSuccess();
+
+  // Generate QR Code
+  createQRCode();
+
+  // Displaying QR Code
+  qrBoxDisplay();
 });
-
-// Generating Qr Code
-
-// Creating QR Code Image Elemnet
-
-// Inserting The QR Code Element

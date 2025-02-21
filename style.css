@@ -69,3 +69,8 @@ body {
 .qr-box {
   display: none;
 }
+
+.qr-box img {
+  width: 200px;
+  height: 200px;
+}
