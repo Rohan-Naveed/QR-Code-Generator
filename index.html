@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet" />
-    <title>Dark Starfield Background</title>
+    <title>QR Code Generator</title>
   </head>
   <body>
     <div class="container">
-      <div class="inputbox">
-        <input required="required" type="text" />
-        <span>Enter You Link</span>
-        <i></i>
-      </div>
+      <form onsubmit="return false" class="input-container">
+        <!-- From Uiverse.io by cohencoo -->
+        <input
+          type="text"
+          placeholder="Write here..."
+          name="text"
+          class="input"
+        />
+      </form>
+      <div class="qr-box"></div>
     </div>
 
     <script src="script.js"></script>
